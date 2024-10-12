@@ -1,0 +1,9 @@
+uvicorn[standard]
+fastapi
+sqlalchemy
+asyncpg
+pydantic
+pydantic_settings
+fastapi-users[sqlalchemy]
+python-jose
+passlib
