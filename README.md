@@ -35,8 +35,12 @@ cd Train-project
 
 1. **Create a .env file with necessary environment variables**:
    ```bash
-   DATABASE_URL=postgresql://user:password@localhost/db_name
+   # Database
+   DATABASE_URL=postgresql://postgres:postgres@db:5432/train_db
+
+   # App
    SECRET_KEY=your_secret_key
+   DEBUG=True
    ```
 2. **Install dependencies**:
    ```bash
