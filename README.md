@@ -48,20 +48,74 @@ cd Train-project
    ```
 4. **▶️ Run Locally**:
    ```bash
-   uvicorn main:app --reload
+   python main.py
    ```
 
 ---
 
-## 📑 API Endpoints
+## 📑 **API Endpoints**
 
-| **Method** | **Endpoint**       | **Description**          |
-|------------|---------------------|--------------------------|
-| `POST`     | `/auth/register`    | Register a new user      |
-| `POST`     | `/auth/login`       | Login user               |
-| `GET`      | `/projects`         | List all projects        |
-| `POST`     | `/projects`         | Create a project         |
-| `PUT`      | `/tasks/{id}`       | Update a task by ID      |
+### 🔑 **Authentication**
+
+| **Method** | **Endpoint**                   | **Description**       | **Tag**          |
+|------------|---------------------------------|-----------------------|------------------|
+| `POST`     | `/auth/jwt/login`               | Login with JWT        | Auth:Jwt.Login   |
+| `POST`     | `/auth/jwt/logout`              | Logout with JWT       | Auth:Jwt.Logout  |
+| `POST`     | `/auth/register`                | User registration     | Register:Register|
+| `POST`     | `/auth/forgot-password`         | Forgot password       | Reset:Forgot PW  |
+| `POST`     | `/auth/reset-password`          | Reset password        | Reset:Reset PW   |
+| `POST`     | `/auth/request-verify-token`    | Request verify token  | Verify:Request   |
+| `POST`     | `/auth/verify`                  | Verify token          | Verify:Verify    |
+
+---
+
+### 👤 **Users**
+
+| **Method** | **Endpoint**       | **Description**     | **Tag**               |
+|------------|---------------------|---------------------|-----------------------|
+| `GET`      | `/users/me`         | Get current user    | Users:Current User    |
+| `PATCH`    | `/users/me`         | Update current user | Users:Patch Current   |
+| `GET`      | `/users/{id}`       | Get user by ID      | Users:User            |
+| `PATCH`    | `/users/{id}`       | Update user by ID   | Users:Patch User      |
+| `DELETE`   | `/users/{id}`       | Delete user by ID   | Users:Delete User     |
+
+---
+
+### 📌 **Tasks**
+
+| **Method** | **Endpoint**       | **Description**     | **Tag**       |
+|------------|---------------------|---------------------|--------------|
+| `POST`     | `/tasks/`           | Create task         | Create Task  |
+| `GET`      | `/tasks/{task_id}`  | Get task by ID      | Get Task     |
+| `PATCH`    | `/tasks/{task_id}`  | Update task by ID   | Update Task  |
+| `DELETE`   | `/tasks/{task_id}`  | Delete task by ID   | Delete Task  |
+
+---
+
+### 🗂️ **Projects**
+
+| **Method** | **Endpoint**           | **Description**     | **Tag**        |
+|------------|-------------------------|---------------------|---------------|
+| `POST`     | `/projects/`           | Create project      | Create Project|
+| `GET`      | `/projects/{project_id}`| Get project by ID   | Get Project   |
+| `PATCH`    | `/projects/{project_id}`| Update project by ID| Update Project|
+| `DELETE`   | `/projects/{project_id}`| Delete project by ID| Delete Project|
+
+---
+
+### 🌐 **Default**
+
+| **Method** | **Endpoint**             | **Description**       | **Tag**              |
+|------------|---------------------------|-----------------------|----------------------|
+| `GET`      | `/authenticated-route`   | Test authenticated route | Authenticated Route |
+
+---
+
+## 🛠️ **Пояснення до таблиць:**
+1. **Method:** HTTP-метод (GET, POST, PATCH, DELETE).  
+2. **Endpoint:** URL-шлях для доступу до ресурсу.  
+3. **Description:** Короткий опис функціоналу.  
+4. **Tag:** Зручний маркер для групування ендпоінтів.
 
 ---
 
