@@ -141,9 +141,9 @@ This project is licensed under the MIT License.
 
 ## 📞 Contact
 
-**Author:** Ivan Kozhevnyk
-**Email:** ivankozhevnyk@gmail.com
-**GitHub:** Ivan2330
+- **Author:** Ivan Kozhevnyk
+- **Email:** ivankozhevnyk@gmail.com
+- **GitHub:** Ivan2330
 
 
 
